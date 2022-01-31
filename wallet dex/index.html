@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+
+    <title>Portfolio&Dex</title>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <!-- Navbar content -->
+
+
+            <h1>Wallet and swap</h1>
+            <div class="nav-button">
+                <button class="btn btn-secondary" id="btn-buyCryto">Buy Crypto</button>
+                <button class="btn btn-secondary" id="btn-login">Wallet connect</button>
+                <button class="btn btn-secondary" id="btn-logout">Logout</button>
+            </div>
+        </nav>
+    </header>
+    <table class="table table-dark table-sm" id="js-lista-token-wallet">
+        <thead class="table-dark">
+            <td>
+                #
+            </td>
+            <td>
+                Token
+            </td>
+            <td>
+                Amount
+            </td>
+            <td>
+                Swap
+            </td>
+        </thead>
+        <tbody id="body-tabella">
+            ...
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+    <form action="post" class="swap">
+        <div class="container">
+            <div>
+                <div class="form-floating">
+                    <select class="form-select" id="js-coin-from" aria-label="">
+                        <option selected>From</option>
+                        <option value="18-0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee">MATIC ------->
+                            0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</option>)
+
+
+                    </select>
+                    <label for="floatingSelect">Sell</label>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Amount</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg" id="js-value-from">
+                </div>
+            </div>
+            <div>
+                <div class="form-floating">
+                    <select class="form-select" id="js-coin-to" aria-label="Floating label select example">
+                        <option selected>To</option>
+                        <option value="1">One</option>
+
+                    </select>
+                    <label for="floatingSelect">Buy</label>
+                </div>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">Amount</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg" id="js-value-to">
+                </div>
+            </div>
+            <p class="css-information" id="js-balance"></p>
+            <p class="css-information" id="js-p-gasfee"></p>
+            <p class="css-information" id="js-p-allowance"></p>
+            <button type="submit" class="btn btn-primary" id="js-submit-approve" disabled="disabled">Approve</button>
+            <button type="submit" class="btn btn-primary" id="js-submit-swap" disabled="disabled">Swap</button>
+            <button class="btn btn-primary" id="js-clear-form">Clear</button>
+        </div>
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="dex.js"></script>
+</body>
+
+</html>
